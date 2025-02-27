@@ -7,29 +7,32 @@ Backlog Wiki のコンテンツをダウンロードするための CLI ツー�
 [![Downloads/week](https://img.shields.io/npm/dw/backlog-wiki-exporter.svg)](https://npmjs.org/package/backlog-wiki-exporter)
 
 <!-- toc -->
-* [backlog-wiki-exporter](#backlog-wiki-exporter)
-* [Usage](#usage)
-* [.envファイル](#envファイル)
-* [環境変数からAPIキーを使用する場合](#環境変数からapiキーを使用する場合)
-* [コマンドライン引数でAPIキーを指定する場合](#コマンドライン引数でapiキーを指定する場合)
-* [出力先ディレクトリを指定する場合](#出力先ディレクトリを指定する場合)
-* [Commands](#commands)
+
+- [backlog-wiki-exporter](#backlog-wiki-exporter)
+- [Usage](#usage)
+- [.env ファイル](#envファイル)
+- [環境変数から API キーを使用する場合](#環境変数からapiキーを使用する場合)
+- [コマンドライン引数で API キーを指定する場合](#コマンドライン引数でapiキーを指定する場合)
+- [出力先ディレクトリを指定する場合](#出力先ディレクトリを指定する場合)
+- [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
+
 ```sh-session
 $ npm install -g backlog-wiki-exporter
 $ bwe COMMAND
 running command...
 $ bwe (--version)
-backlog-wiki-exporter/0.0.0 darwin-arm64 node-v20.18.1
+backlog-wiki-exporter/0.0.2 darwin-arm64 node-v20.18.1
 $ bwe --help [COMMAND]
 USAGE
   $ bwe COMMAND
 ...
 ```
+
 <!-- usagestop -->
 
 ## 環境変数の設定
@@ -63,20 +66,21 @@ $ bwe download --domain your-domain.backlog.jp --output ./wiki-data
 # Commands
 
 <!-- commands -->
-* [`bwe download [URL]`](#bwe-download-url)
-* [`bwe hello PERSON`](#bwe-hello-person)
-* [`bwe hello world`](#bwe-hello-world)
-* [`bwe help [COMMAND]`](#bwe-help-command)
-* [`bwe plugins`](#bwe-plugins)
-* [`bwe plugins add PLUGIN`](#bwe-plugins-add-plugin)
-* [`bwe plugins:inspect PLUGIN...`](#bwe-pluginsinspect-plugin)
-* [`bwe plugins install PLUGIN`](#bwe-plugins-install-plugin)
-* [`bwe plugins link PATH`](#bwe-plugins-link-path)
-* [`bwe plugins remove [PLUGIN]`](#bwe-plugins-remove-plugin)
-* [`bwe plugins reset`](#bwe-plugins-reset)
-* [`bwe plugins uninstall [PLUGIN]`](#bwe-plugins-uninstall-plugin)
-* [`bwe plugins unlink [PLUGIN]`](#bwe-plugins-unlink-plugin)
-* [`bwe plugins update`](#bwe-plugins-update)
+
+- [`bwe download [URL]`](#bwe-download-url)
+- [`bwe hello PERSON`](#bwe-hello-person)
+- [`bwe hello world`](#bwe-hello-world)
+- [`bwe help [COMMAND]`](#bwe-help-command)
+- [`bwe plugins`](#bwe-plugins)
+- [`bwe plugins add PLUGIN`](#bwe-plugins-add-plugin)
+- [`bwe plugins:inspect PLUGIN...`](#bwe-pluginsinspect-plugin)
+- [`bwe plugins install PLUGIN`](#bwe-plugins-install-plugin)
+- [`bwe plugins link PATH`](#bwe-plugins-link-path)
+- [`bwe plugins remove [PLUGIN]`](#bwe-plugins-remove-plugin)
+- [`bwe plugins reset`](#bwe-plugins-reset)
+- [`bwe plugins uninstall [PLUGIN]`](#bwe-plugins-uninstall-plugin)
+- [`bwe plugins unlink [PLUGIN]`](#bwe-plugins-unlink-plugin)
+- [`bwe plugins update`](#bwe-plugins-update)
 
 ## `bwe download [URL]`
 
@@ -103,7 +107,7 @@ EXAMPLES
   Download wiki content from Backlog using API key
 ```
 
-_See code: [src/commands/download/index.ts](https://github.com/workspace/backlog-wiki-exporter/blob/v0.0.0/src/commands/download/index.ts)_
+_See code: [src/commands/download/index.ts](https://github.com/workspace/backlog-wiki-exporter/blob/v0.0.2/src/commands/download/index.ts)_
 
 ## `bwe hello PERSON`
 
@@ -127,7 +131,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [src/commands/hello/index.ts](https://github.com/workspace/backlog-wiki-exporter/blob/v0.0.0/src/commands/hello/index.ts)_
+_See code: [src/commands/hello/index.ts](https://github.com/workspace/backlog-wiki-exporter/blob/v0.0.2/src/commands/hello/index.ts)_
 
 ## `bwe hello world`
 
@@ -145,7 +149,7 @@ EXAMPLES
   hello world! (./src/commands/hello/world.ts)
 ```
 
-_See code: [src/commands/hello/world.ts](https://github.com/workspace/backlog-wiki-exporter/blob/v0.0.0/src/commands/hello/world.ts)_
+_See code: [src/commands/hello/world.ts](https://github.com/workspace/backlog-wiki-exporter/blob/v0.0.2/src/commands/hello/world.ts)_
 
 ## `bwe help [COMMAND]`
 
@@ -456,4 +460,5 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.34/src/commands/plugins/update.ts)_
+
 <!-- commandsstop -->
