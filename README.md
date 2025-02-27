@@ -7,15 +7,18 @@ Backlog Wiki のコンテンツをダウンロードするための CLI ツー�
 [![Downloads/week](https://img.shields.io/npm/dw/backlog-wiki-exporter.svg)](https://npmjs.org/package/backlog-wiki-exporter)
 
 <!-- toc -->
-
-- [Usage](#usage)
-- [Commands](#commands)
+* [backlog-wiki-exporter](#backlog-wiki-exporter)
+* [Usage](#usage)
+* [.envファイル](#envファイル)
+* [環境変数からAPIキーを使用する場合](#環境変数からapiキーを使用する場合)
+* [コマンドライン引数でAPIキーを指定する場合](#コマンドライン引数でapiキーを指定する場合)
+* [出力先ディレクトリを指定する場合](#出力先ディレクトリを指定する場合)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g backlog-wiki-exporter
 $ bwe COMMAND
@@ -27,7 +30,6 @@ USAGE
   $ bwe COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 ## 環境変数の設定
@@ -61,20 +63,47 @@ $ bwe download --domain your-domain.backlog.jp --output ./wiki-data
 # Commands
 
 <!-- commands -->
+* [`bwe download [URL]`](#bwe-download-url)
+* [`bwe hello PERSON`](#bwe-hello-person)
+* [`bwe hello world`](#bwe-hello-world)
+* [`bwe help [COMMAND]`](#bwe-help-command)
+* [`bwe plugins`](#bwe-plugins)
+* [`bwe plugins add PLUGIN`](#bwe-plugins-add-plugin)
+* [`bwe plugins:inspect PLUGIN...`](#bwe-pluginsinspect-plugin)
+* [`bwe plugins install PLUGIN`](#bwe-plugins-install-plugin)
+* [`bwe plugins link PATH`](#bwe-plugins-link-path)
+* [`bwe plugins remove [PLUGIN]`](#bwe-plugins-remove-plugin)
+* [`bwe plugins reset`](#bwe-plugins-reset)
+* [`bwe plugins uninstall [PLUGIN]`](#bwe-plugins-uninstall-plugin)
+* [`bwe plugins unlink [PLUGIN]`](#bwe-plugins-unlink-plugin)
+* [`bwe plugins update`](#bwe-plugins-update)
 
-- [`bwe hello PERSON`](#bwe-hello-person)
-- [`bwe hello world`](#bwe-hello-world)
-- [`bwe help [COMMAND]`](#bwe-help-command)
-- [`bwe plugins`](#bwe-plugins)
-- [`bwe plugins add PLUGIN`](#bwe-plugins-add-plugin)
-- [`bwe plugins:inspect PLUGIN...`](#bwe-pluginsinspect-plugin)
-- [`bwe plugins install PLUGIN`](#bwe-plugins-install-plugin)
-- [`bwe plugins link PATH`](#bwe-plugins-link-path)
-- [`bwe plugins remove [PLUGIN]`](#bwe-plugins-remove-plugin)
-- [`bwe plugins reset`](#bwe-plugins-reset)
-- [`bwe plugins uninstall [PLUGIN]`](#bwe-plugins-uninstall-plugin)
-- [`bwe plugins unlink [PLUGIN]`](#bwe-plugins-unlink-plugin)
-- [`bwe plugins update`](#bwe-plugins-update)
+## `bwe download [URL]`
+
+Download content from Backlog Wiki
+
+```
+USAGE
+  $ bwe download [URL] --domain <value> --projectIdOrKey <value> [--apiKey <value>] [-o <value>]
+
+ARGUMENTS
+  URL  URL to download from
+
+FLAGS
+  -o, --output=<value>          [default: ./backlog-wiki] Output directory path
+      --apiKey=<value>          Backlog API key (環境変数 BACKLOG_API_KEY からも自動読み取り可能)
+      --domain=<value>          (required) Backlog domain (e.g. example.backlog.jp)
+      --projectIdOrKey=<value>  (required) Backlog project ID or key
+
+DESCRIPTION
+  Download content from Backlog Wiki
+
+EXAMPLES
+  $ bwe download --domain cm1.backlog.jp --projectId PROJECT_ID --apiKey YOUR_API_KEY --output ./wiki-data
+  Download wiki content from Backlog using API key
+```
+
+_See code: [src/commands/download/index.ts](https://github.com/workspace/backlog-wiki-exporter/blob/v0.0.0/src/commands/download/index.ts)_
 
 ## `bwe hello PERSON`
 
@@ -427,5 +456,4 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.34/src/commands/plugins/update.ts)_
-
 <!-- commandsstop -->
