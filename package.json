@@ -10,7 +10,8 @@
   "dependencies": {
     "@oclif/core": "^4",
     "@oclif/plugin-help": "^6",
-    "@oclif/plugin-plugins": "^5"
+    "@oclif/plugin-plugins": "^5",
+    "ky": "^1.7.5"
   },
   "devDependencies": {
     "@eslint/compat": "^1",
