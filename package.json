@@ -1,10 +1,10 @@
 {
   "name": "backlog-wiki-exporter",
   "description": "A new CLI generated with oclif",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "ShuntaToda",
   "bin": {
-    "bwe": "./bin/run.js"
+    "bwe": "bin/run.js"
   },
   "bugs": "https://github.com/workspace/backlog-wiki-exporter/issues",
   "dependencies": {
@@ -61,7 +61,10 @@
       }
     }
   },
-  "repository": "workspace/backlog-wiki-exporter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/workspace/backlog-wiki-exporter.git"
+  },
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint",
