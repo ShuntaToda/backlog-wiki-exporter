@@ -1,20 +1,21 @@
-backlog-wiki-exporter
-=================
+# backlog-wiki-exporter
 
-A new CLI generated with oclif
-
+Backlog Wiki のコンテンツをダウンロードするための CLI ツール
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/backlog-wiki-exporter.svg)](https://npmjs.org/package/backlog-wiki-exporter)
 [![Downloads/week](https://img.shields.io/npm/dw/backlog-wiki-exporter.svg)](https://npmjs.org/package/backlog-wiki-exporter)
 
-
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g backlog-wiki-exporter
 $ bwe COMMAND
@@ -26,22 +27,54 @@ USAGE
   $ bwe COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
+## 環境変数の設定
+
+`.env`ファイルを作成して、Backlog API キーを設定することができます。
+
+```
+# .envファイル
+BACKLOG_API_KEY=your_api_key_here
+```
+
+または、コマンドライン引数で直接 API キーを指定することもできます。
+
+## Backlog Wiki のダウンロード
+
+以下のコマンドを使用して、Backlog Wiki のコンテンツをダウンロードできます。
+
+```sh-session
+# 環境変数からAPIキーを使用する場合
+$ bwe download --domain your-domain.backlog.jp
+
+# コマンドライン引数でAPIキーを指定する場合
+$ bwe download --domain your-domain.backlog.jp --apiKey YOUR_API_KEY
+
+# 出力先ディレクトリを指定する場合
+$ bwe download --domain your-domain.backlog.jp --output ./wiki-data
+```
+
+ダウンロードした Wiki データは、指定した出力ディレクトリ（デフォルトは`./backlog-wiki`）に保存されます。
+
 # Commands
+
 <!-- commands -->
-* [`bwe hello PERSON`](#bwe-hello-person)
-* [`bwe hello world`](#bwe-hello-world)
-* [`bwe help [COMMAND]`](#bwe-help-command)
-* [`bwe plugins`](#bwe-plugins)
-* [`bwe plugins add PLUGIN`](#bwe-plugins-add-plugin)
-* [`bwe plugins:inspect PLUGIN...`](#bwe-pluginsinspect-plugin)
-* [`bwe plugins install PLUGIN`](#bwe-plugins-install-plugin)
-* [`bwe plugins link PATH`](#bwe-plugins-link-path)
-* [`bwe plugins remove [PLUGIN]`](#bwe-plugins-remove-plugin)
-* [`bwe plugins reset`](#bwe-plugins-reset)
-* [`bwe plugins uninstall [PLUGIN]`](#bwe-plugins-uninstall-plugin)
-* [`bwe plugins unlink [PLUGIN]`](#bwe-plugins-unlink-plugin)
-* [`bwe plugins update`](#bwe-plugins-update)
+
+- [`bwe hello PERSON`](#bwe-hello-person)
+- [`bwe hello world`](#bwe-hello-world)
+- [`bwe help [COMMAND]`](#bwe-help-command)
+- [`bwe plugins`](#bwe-plugins)
+- [`bwe plugins add PLUGIN`](#bwe-plugins-add-plugin)
+- [`bwe plugins:inspect PLUGIN...`](#bwe-pluginsinspect-plugin)
+- [`bwe plugins install PLUGIN`](#bwe-plugins-install-plugin)
+- [`bwe plugins link PATH`](#bwe-plugins-link-path)
+- [`bwe plugins remove [PLUGIN]`](#bwe-plugins-remove-plugin)
+- [`bwe plugins reset`](#bwe-plugins-reset)
+- [`bwe plugins uninstall [PLUGIN]`](#bwe-plugins-uninstall-plugin)
+- [`bwe plugins unlink [PLUGIN]`](#bwe-plugins-unlink-plugin)
+- [`bwe plugins update`](#bwe-plugins-update)
 
 ## `bwe hello PERSON`
 
@@ -394,4 +427,5 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.34/src/commands/plugins/update.ts)_
+
 <!-- commandsstop -->
