@@ -26,7 +26,7 @@ $ npm install -g backlog-wiki-exporter
 $ bwe COMMAND
 running command...
 $ bwe (--version)
-backlog-wiki-exporter/0.0.2 darwin-arm64 node-v20.18.1
+backlog-wiki-exporter/0.0.3 darwin-arm64 node-v20.18.1
 $ bwe --help [COMMAND]
 USAGE
   $ bwe COMMAND
@@ -107,7 +107,7 @@ EXAMPLES
   Download wiki content from Backlog using API key
 ```
 
-_See code: [src/commands/download/index.ts](https://github.com/workspace/backlog-wiki-exporter/blob/v0.0.2/src/commands/download/index.ts)_
+_See code: [src/commands/download/index.ts](https://github.com/workspace/backlog-wiki-exporter/blob/v0.0.3/src/commands/download/index.ts)_
 
 ## `bwe hello PERSON`
 
@@ -131,7 +131,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [src/commands/hello/index.ts](https://github.com/workspace/backlog-wiki-exporter/blob/v0.0.2/src/commands/hello/index.ts)_
+_See code: [src/commands/hello/index.ts](https://github.com/workspace/backlog-wiki-exporter/blob/v0.0.3/src/commands/hello/index.ts)_
 
 ## `bwe hello world`
 
@@ -149,7 +149,7 @@ EXAMPLES
   hello world! (./src/commands/hello/world.ts)
 ```
 
-_See code: [src/commands/hello/world.ts](https://github.com/workspace/backlog-wiki-exporter/blob/v0.0.2/src/commands/hello/world.ts)_
+_See code: [src/commands/hello/world.ts](https://github.com/workspace/backlog-wiki-exporter/blob/v0.0.3/src/commands/hello/world.ts)_
 
 ## `bwe help [COMMAND]`
 
