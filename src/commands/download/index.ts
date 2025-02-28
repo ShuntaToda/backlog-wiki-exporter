@@ -109,8 +109,11 @@ Download wiki content from Backlog using API key
           // JSONからcontentフィールドを取得
           const content = (wikiDetail.content as string) || ''
 
-          // Markdownファイルに書き込む（タイトルを追加）
-          const markdownContent = `# ${wiki.name}\n\n${content}`
+          // BacklogのWikiへのリンクを作成
+          const backlogWikiUrl = `https://${domain}/alias/wiki/${wikiId}`
+
+          // Markdownファイルに書き込む（タイトルとBacklogリンクを追加）
+          const markdownContent = `# ${wiki.name}\n\n[Backlog Wiki Link](${backlogWikiUrl})\n\n${content}`
           await fs.writeFile(wikiFilePath, markdownContent)
 
           this.log(`Wiki "${wiki.name}" saved to ${wikiFilePath}`)
